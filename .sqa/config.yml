@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/OSTrails/FAIR-Champion:
+      branch: master
+      repo: https://github.com/OSTrails/FAIR-Champion.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/OSTrails/FAIR-Champion git:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-goldenrod-wildebeest.sh
+        container: qc.acc_chewy-plum-setter
+  QC.Doc:
+    repos:
+      github.com/OSTrails/FAIR-Champion find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-cornflower-cattle.sh
+        container: qc.doc_dorky-ochre-frigatebird
+      github.com/OSTrails/FAIR-Champion git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-lilac-hyena.sh
+        container: qc.doc_whiny-grey-discus
+      github.com/OSTrails/FAIR-Champion markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-olivine-butterfly.sh
+        container: qc.doc_blurry-mauve-sloth
+  QC.Lic:
+    repos:
+      github.com/OSTrails/FAIR-Champion licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-ultramarine-bear.sh
+        container: qc.lic_droopy-copper-frog
+  QC.Sty:
+    repos:
+      github.com/OSTrails/FAIR-Champion hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-carmine-hummingbird.sh
+        container: qc.sty_gamy-cornflower-hamster
+      github.com/OSTrails/FAIR-Champion jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-orchid-javanese.sh
+        container: qc.sty_sleazy-black-squirrel
+      github.com/OSTrails/FAIR-Champion rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-tomato-skunk.sh
+        container: qc.sty_shaggy-celadon-cat
+  QC.Ver:
+    repos:
+      github.com/OSTrails/FAIR-Champion get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-saffron-wombat.sh
+        container: qc.ver_beady-magnolia-hummingbird
+timeout: 5400
