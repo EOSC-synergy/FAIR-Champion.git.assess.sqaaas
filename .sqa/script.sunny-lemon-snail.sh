@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/OSTrails/FAIR-Champion &&
-    jsonlint-cli "**/*.json"
+cd github.com/markwilkinson/FAIR-Champion &&
+    get_git_tags.py
 )

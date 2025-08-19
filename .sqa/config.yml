@@ -4,57 +4,57 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/OSTrails/FAIR-Champion:
+    github.com/markwilkinson/FAIR-Champion:
       branch: master
-      repo: https://github.com/OSTrails/FAIR-Champion.git
+      repo: https://github.com/markwilkinson/FAIR-Champion.git
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/OSTrails/FAIR-Champion git:
+      github.com/markwilkinson/FAIR-Champion git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-goldenrod-wildebeest.sh
-        container: qc.acc_chewy-plum-setter
+        - /usr/bin/env sh .sqa/script.skanky-taupe-dogfish.sh
+        container: qc.acc_goopy-gamboge-emu
   QC.Doc:
     repos:
-      github.com/OSTrails/FAIR-Champion find_doc_files.py:
+      github.com/markwilkinson/FAIR-Champion find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-cornflower-cattle.sh
-        container: qc.doc_dorky-ochre-frigatebird
-      github.com/OSTrails/FAIR-Champion git:
+        - /usr/bin/env sh .sqa/script.dorky-harlequin-tamarin.sh
+        container: qc.doc_crappy-rose-bandicoot
+      github.com/markwilkinson/FAIR-Champion git:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-lilac-hyena.sh
-        container: qc.doc_whiny-grey-discus
-      github.com/OSTrails/FAIR-Champion markdownlint:
+        - /usr/bin/env sh .sqa/script.messy-corn-angelfish.sh
+        container: qc.doc_shaggy-rose-cow
+      github.com/markwilkinson/FAIR-Champion markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-olivine-butterfly.sh
-        container: qc.doc_blurry-mauve-sloth
+        - /usr/bin/env sh .sqa/script.geeky-blue-eleuth.sh
+        container: qc.doc_zippy-tomato-tzu
   QC.Lic:
     repos:
-      github.com/OSTrails/FAIR-Champion licensee:
+      github.com/markwilkinson/FAIR-Champion licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-ultramarine-bear.sh
-        container: qc.lic_droopy-copper-frog
+        - /usr/bin/env sh .sqa/script.seedy-tomato-tamarin.sh
+        container: qc.lic_snoopy-cerulean-zorse
   QC.Sty:
     repos:
-      github.com/OSTrails/FAIR-Champion hadolint:
+      github.com/markwilkinson/FAIR-Champion hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-carmine-hummingbird.sh
-        container: qc.sty_gamy-cornflower-hamster
-      github.com/OSTrails/FAIR-Champion jsonlint:
+        - /usr/bin/env sh .sqa/script.paltry-lime-goat.sh
+        container: qc.sty_muzzy-bistre-sloth
+      github.com/markwilkinson/FAIR-Champion jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-orchid-javanese.sh
-        container: qc.sty_sleazy-black-squirrel
-      github.com/OSTrails/FAIR-Champion rubocop:
+        - /usr/bin/env sh .sqa/script.wimpy-ivory-heron.sh
+        container: qc.sty_lanky-vermilion-jackal
+      github.com/markwilkinson/FAIR-Champion rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-tomato-skunk.sh
-        container: qc.sty_shaggy-celadon-cat
+        - /usr/bin/env sh .sqa/script.ready-gold-olm.sh
+        container: qc.sty_randy-saffron-grasshopper
   QC.Ver:
     repos:
-      github.com/OSTrails/FAIR-Champion get_git_tags.py:
+      github.com/markwilkinson/FAIR-Champion get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-saffron-wombat.sh
-        container: qc.ver_beady-magnolia-hummingbird
+        - /usr/bin/env sh .sqa/script.sunny-lemon-snail.sh
+        container: qc.ver_chummy-fuchsia-hound
 timeout: 5400

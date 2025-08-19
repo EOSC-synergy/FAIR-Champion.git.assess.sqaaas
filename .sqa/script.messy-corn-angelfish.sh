@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/OSTrails/FAIR-Champion &&
-    mdl --json  .
+cd github.com/markwilkinson/FAIR-Champion &&
+    git rev-parse --is-inside-work-tree 
 )
